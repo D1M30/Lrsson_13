@@ -1,0 +1,486 @@
+body{
+background-color: rgb(219, 239, 209);
+overflow:scroll ;
+
+}
+
+.wrapper{
+   width: 100%;
+   margin: 0 auto;
+   background-color: rgba(28, 115, 222, 0.928);
+   padding-bottom: 50px;
+ 
+   
+}
+
+.box{
+max-width: 100%;
+padding: 50px;
+background-color: rgb(234, 228, 153);
+position: relative;
+text-align: center;
+font-size: 50px;
+
+
+}
+
+.box::before{
+   content: "";
+   width: 100%;
+   height: 100%;
+   background-color: rgb(131, 30, 30);
+   position:absolute ;
+   top: 0;
+   left: 0px;
+   opacity: 1;
+   transition:all 3s ease 1s ;
+   z-index: 2;
+
+}
+
+.box:hover::before{
+   opacity: 0;
+}
+
+.title{
+   animation: title 4s infinite ease;
+    position:absolute ;
+    z-index: 0;
+    left: 180px;
+}
+
+
+
+.container{
+   padding: 50px 0;
+}
+
+
+.light{
+   max-width: 800px;
+   height:200px ;
+   background: rgb(227, 68, 68);
+   position: relative;
+   border: 2px solid ;
+   margin: 0 auto 60px;
+
+}
+
+
+.light__pic{
+   position: absolute;
+   background: url(../img/light.png) no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 200px; 
+   bottom: 60px;
+
+
+}
+
+.light__item{
+   position:absolute ;
+   border-radius:50%;
+   box-shadow: 0px 0px 20px 19px; 
+   animation:firstq 1s ease ;
+ 
+}
+
+.light__item:nth-child(1){
+bottom: 112px;
+left: 70px;
+box-shadow: 0px 0px 20px 19px yellow;
+animation:first 1s ease-in infinite alternate;
+}
+
+.light__item:nth-child(2){
+   bottom: 80px;
+   left: 214px;
+   box-shadow: 0px 0px 20px 19px rgb(43, 82, 240);
+   animation:second 1.3s ease infinite alternate;
+}
+
+.light__item:nth-child(3){
+   bottom: 63px;
+   left: 355px;
+   box-shadow: 0px 0px 20px 19px rgb(248, 249, 251);
+   animation:third 0.7s ease infinite alternate;
+}
+
+.light__item:nth-child(4){
+   bottom: 64px;
+   right:295px;
+   box-shadow: 0px 0px 20px 19px yellow;
+   animation:fourth 1s ease infinite alternate;
+}
+
+.light__item:nth-child(5){
+   bottom: 85px;
+   right:151px;
+   box-shadow: 0px 0px 20px 19px rgb(43, 82, 240);
+   animation:fifth 0.6s ease infinite alternate;
+}
+
+.light__item:nth-child(6){
+   bottom: 125px;
+   right:20px;
+   box-shadow: 0px 0px 20px 19px rgb(248, 249, 251);
+   animation:sixth 1.4s ease infinite alternate;
+}
+
+
+
+.road{
+   border: 2px solid #000;
+   height: 300px;
+   background-color: rgb(40, 37, 37);
+   position: relative;
+   overflow: hidden;
+   margin-bottom: 50px
+   ;
+}
+
+.road::before{
+   content: "";
+   position:absolute ;
+   border-bottom: dashed 7px #fff;
+   width: 100%;
+   height: 100px;
+}
+
+.road::after{
+   content: "";
+   position:absolute ;
+   border-bottom: dashed 7px #fff;
+   width: 100%;
+   height: 200px;
+}
+
+.road__car--police{
+   background: url(../img/police.png) 0 0 no-repeat;
+   background-size: contain;
+   position:absolute ;
+   width: 150px;
+   height: 80px;
+   transform: rotate(180deg);
+   animation: police-car 5s linear infinite;
+   
+   
+}
+
+.road__car--grey{
+   background: url(../img/grey.png) 0 0 no-repeat;
+   background-size: contain;
+   position:absolute ;
+   width: 80px;
+   height: 150px;
+   transform: rotate(90deg);
+   top: 75px;
+   animation: grey-car 5s ease-in-out infinite;
+}
+
+.road__car--red{
+   background: url(../img/red.png) 0 0 no-repeat;
+   background-size: contain;
+   position:absolute ;
+   width: 150px;
+   height: 80px;
+   transform: rotate(180deg);
+   bottom: 12px;
+   animation: red-car 4s linear infinite;
+}
+
+
+
+
+.newton{
+   width: 500px;
+   height: 300px;
+   position: relative;
+   margin: 0 auto 150px;
+   border: 2px solid;
+   background-color: rgb(77, 70, 111);
+   overflow: hidden;
+}
+
+.newton__line{
+   width: 120%;
+   position:absolute ;
+   height: 5px;
+   top: 51px;
+   left: -5px;
+   border: 1px solid;
+   background-color: rgb(5, 100, 78);
+}
+
+.newton__ball{
+   position:absolute ;
+   width: 100px;
+   height: 200px;
+   top: 51px;
+   transform-origin:top ;
+}
+
+
+.newton__ball::before{
+   content: "";
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   background-color: rgb(75, 146, 83);
+   border: 1px solid;
+   position:absolute ;
+   bottom: -10px;
+   z-index: 1;
+}
+
+.newton__ball::after{
+content: "";
+width: 5px;
+height: 170px;
+position:absolute ;
+background-color: rgb(4, 62, 129);
+left: 48%;
+}
+
+.newton__ball--left{
+left: 100px;
+animation: left-ball 1s infinite forwards;
+
+}
+
+.newton__ball--center{
+   left: 200px;
+}
+
+.newton__ball--right{
+   right: 96px;
+   animation: right-ball 1s infinite forwards;
+}
+
+.figure{
+position: relative;
+width: 400px;
+height: 400px;
+margin: 0 auto;
+
+}
+
+.star {
+   background: rgb(41, 94, 238);
+   width: 380px;
+   height: 380px;
+   position: absolute;
+   text-align: center;
+   transform: rotate(20deg);
+   
+  
+   animation: star 5s linear infinite ;
+   
+
+}
+.star::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 380px;
+   width: 380px;
+   background: rgb(41, 94, 238);
+   transform: rotate(135deg);
+
+   
+}
+
+.content{
+   position:absolute ;
+   height: 300px;
+   width: 300px;
+  
+  top: 40px;
+  left: 40px;
+text-align: center;
+overflow: hidden;
+}
+
+.content__title{
+   font-weight: 900;
+   font-size: 40px;
+   margin-bottom: 30px;
+   padding: 10px;
+   
+   animation: content-title 2s linear ;
+}
+
+
+
+
+.content__text{
+   font-size: 20px;
+   transform: translate(0,110%);
+   animation: content-text 2s  forwards 1s ;
+   opacity: 0;
+}
+
+
+
+
+
+@keyframes  first  {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+@keyframes  second  {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+@keyframes  third  {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+@keyframes  fourth  {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+@keyframes  fifth  {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+@keyframes  sixth  {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+
+@keyframes  police-car  {
+   0%{
+     transform: translate(-100px,0px) rotate(180deg);
+   }
+
+   100%{
+      transform: translate(1500px,0px) rotate(180deg);
+   }
+}
+
+@keyframes  red-car  {
+   0%{
+     transform: translate(-100px,0px) rotate(180deg);
+   }
+
+   100%{
+      transform: translate(1300px,0px) rotate(180deg);
+   }
+}
+
+@keyframes  grey-car  {
+   0%{
+     transform: translate(-200px,0px) rotate(90deg);
+   }
+
+   100%{
+      transform: translate(1500px,0px) rotate(90deg);
+}
+
+}
+
+@keyframes left-ball  {
+   0%{
+     transform:rotate(45deg) ;
+     
+   }
+25%{
+   transform:rotate(-1deg);
+ 
+}
+70%{
+   transform:rotate(0deg);
+}
+
+   100%{
+       transform:rotate(45deg) ;
+}
+
+}  
+
+@keyframes right-ball  {
+   0%{
+     transform:rotate(0deg) ;
+    
+   }
+
+50%{
+   transform:rotate(-45deg);
+}
+
+   96%{
+       transform:rotate(1deg) ;
+}
+100%{
+   transform:rotate(0deg) ;
+}
+
+}  
+
+@keyframes  title  {
+   0%{
+     transform: translate(0,0px);
+   }
+
+   100%{
+      transform: translate(1500px,0px);
+   }
+}
+
+@keyframes  star  {
+   0%{
+     transform: rotate(0deg);
+   }
+   100%{
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes  content-title  {
+   0%{
+     transform: translate(0,-40px);
+   }
+
+   100%{
+      transform: translate(0px,0px);
+   }
+}
+
+@keyframes  content-text  {
+   0%{
+    opacity: 0;
+    
+   }
+
+   100%{
+      opacity: 1;
+      transform: translate(0px,0%);
+   }
+}
